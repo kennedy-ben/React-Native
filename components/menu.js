@@ -1,6 +1,3 @@
-// import { StyleSheet, Text, View, TouchableOpacity } from 'react-native'
-// import React from 'react'
-
 // export default function Menu(props) {
 //     const onPress = () => {
 //         props.navigation.navigate('Dashboard')
@@ -28,10 +25,11 @@
 // }
 
 // const styles = StyleSheet.create({})
-
+import {Text,TouchableOpacity } from 'react-native'
 import React, { useState } from 'react';
 import { View, StyleSheet, Alert } from 'react-native';
 import { Button, Menu, Provider } from 'react-native-paper';
+
 
 const MenuExample = () => {
 const [visible, setVisible] = useState(false);

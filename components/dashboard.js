@@ -1,23 +1,27 @@
-import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
+import { StyleSheet, Text, View, TouchableOpacity, ImageBackground } from "react-native";
 import React from "react";
 
 // export default function Dashboard(props) {
 //   const onPress = () => {
 //     props.navigation.navigate("Menu");
-//   };
-//   return (
+//   }};
+  
 
     
-    export default function ProfileScreen({ onPress }) {
+    export default function ProfileScreen({ navigation }) {
+      const onPress = () => {
+        navigation.navigate("Menu");
+      }
       return (
+        <ImageBackground source={require('../assets/kk.webp')} style={styles.container}>
         <View style={styles.container}>
           <TouchableOpacity style={styles.button} onPress={onPress}>
-            <Text style={styles.buttonText}>MENU</Text>
+            <Text style={styles.buttonText}>Menu</Text>
           </TouchableOpacity>
     
           <View style={styles.detailsContainer}>
             <Text style={styles.welcomeText}>
-              Welcome Kennedy Makuani (Ken Ben)
+              Welcome Stephen Amimo
             </Text>
     
             <Text style={styles.detailsText}>
@@ -64,50 +68,65 @@ import React from "react";
             </View>
           </View>
         </View>
+        </ImageBackground>
       );
     };
     
     const styles = StyleSheet.create({
       container: {
         flex: 1,
-        backgroundColor: '#FFFFFF',
+        backgroundColor: '#000000',
+        fontSize:18,
         padding: 20,
+        marginTop: 40,
+        alignItems: 'center',
+        paddingVertical: 15,
       },
-      button: {
-        backgroundColor: '#007AFF',
-        padding: 10,
-        borderRadius: 5,
-        alignSelf: 'flex-start',
-      },
-      buttonText: {
-        color: '#FFFFFF',
-        fontSize: 16,
-        fontWeight: 'bold',
-      },
+      // button: {
+      //   backgroundColor: '#5f9ea0',
+      // Menu syles
+      //   padding: 10,
+      //   borderRadius: 2,
+      //   alignSelf: 'flex-start',
+      //   borderBottomWidth: 5,
+      // },
+      // buttonText: {// bold text
+      //   color: '#fff',
+      //   fontSize: 18,
+      //   fontWeight: 'bold',
+      //   paddingHorizontal: 10,
+      //   backgroundColor: '#fffaf0`',
+      // },
       detailsContainer: {
         marginTop: 20,
         alignItems: 'center',
+        justifyContent: 'center',
+        resizeMode: 'cover',
       },
       welcomeText: {
         fontSize: 20,
         fontWeight: 'bold',
-        color: '#007AFF',
+        color: '#fff',
       },
-      detailsText: {
-        marginTop: 10,
-        fontSize: 16,
-        fontWeight: 'bold',
-      },
+      // detailsText: {
+      //   marginTop: 10,
+      //   fontSize: 50,
+      //   fontWeight: 'bold',
+      // },
       detailsList: {
-        marginTop: 10,
-        backgroundColor: '#F2F2F2',
-        borderRadius: 5,
-        padding: 10,
+        marginTop: 20,
+       fontSize: 20,
+        borderRadius: 20,
+        backgroundColor: `#fffaf0`,
+        padding: 80,
       },
       detailItem: {
         flexDirection: 'row',
         justifyContent: 'space-between',
-        marginBottom: 5,},
+        marginBottom: 5,
+        
+      },
+        
       },
     )
 
