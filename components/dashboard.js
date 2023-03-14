@@ -7,9 +7,9 @@ export default function Dashboard(props) {
   };
   return (
     <View>
-      {/* <TouchableOpacity style={styles.button} onPress={onPress}>
+      <TouchableOpacity style={styles.button} onPress={onPress}>
         <Text>MENU</Text>
-      </TouchableOpacity> */}
+      </TouchableOpacity>
       <Text> {"\n"}
       <Text>Welocome Stephen Amimo</Text>
         <Text>{"\n"}Your profile details is below:</Text>
