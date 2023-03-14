@@ -51,19 +51,19 @@ return (
 		}>
 		<Menu.Item
 			onPress={() => {
-			Alert.alert('Action : ', 'Home');
+			Alert.alert('Action : ', 'Welcome to Dashboard');
 			}}
 			title="Home"
 		/>
 		<Menu.Item
 			onPress={() => {
-			Alert.alert('Action : ', 'Staff');
+			Alert.alert('Action : ', 'Welcome to Staff view');
 			}}
 			title="Staff"
 		/>
 		<Menu.Item
 			onPress={() => {
-			Alert.alert('Action : ', 'Continents');
+			Alert.alert('Action : ', 'Welcometo Continents view');
 			}}
 			title="Continents"
 		/>

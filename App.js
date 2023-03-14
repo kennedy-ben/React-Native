@@ -23,9 +23,6 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        {/* <View >
-          <Menu/>
-        </View> */}
         <Stack.Screen name="Login" component={LoginComponent}/>
         <Stack.Screen name="Dashboard" component={Dashboard}/>
         <Stack.Screen name="Menu" component={Menu}/>
