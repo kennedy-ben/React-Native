@@ -5,6 +5,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Dashboard from "./components/dashboard";
 import Menu from "./components/menu";
+import SignupComponent from "./components/signup";
 
 
 // const App = () => {
@@ -25,6 +26,7 @@ export default function App() {
       <Stack.Navigator>
 
         <Stack.Screen name="Login" component={LoginComponent}/>
+        <Stack.Screen name="Signup" component={SignupComponent}/>
         <Stack.Screen name="Dashboard" component={Dashboard}/>
         <Stack.Screen name="Menu" component={Menu}/>
         
