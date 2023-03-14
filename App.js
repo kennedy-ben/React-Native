@@ -6,15 +6,25 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Dashboard from "./components/dashboard";
 import Menu from "./components/menu";
 
+
+// const App = () => {
+//   return (
+//     <View>
+//       <Menu />
+//     </View>
+//   );
+// };
+
+
+
 const Stack = createNativeStackNavigator();
 
 export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        {/* <View style={styles.container}>
-          <LoginComponent />
-          <StatusBar style="auto" />
+        {/* <View >
+          <Menu/>
         </View> */}
         <Stack.Screen name="Login" component={LoginComponent}/>
         <Stack.Screen name="Dashboard" component={Dashboard}/>
