@@ -3,7 +3,7 @@ import { View, TextInput, TouchableOpacity, Text, StyleSheet, ImageBackground } 
 
 const SignupComponent = (props) => {
   const onPress = () => {
-    props.navigation.navigate('Dashboard');
+    props.navigation.navigate('LoginComponent');
   };
 
   return (

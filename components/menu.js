@@ -81,9 +81,9 @@ export default MenuExample;
 
 const styles = StyleSheet.create({
 container: {
-	padding: 50,
+	padding: 0,
 	flexDirection: 'row',
-	justifyContent:'flex-end',
+	justifyContent:'flex-start',
 	height: 200,
 },
 });

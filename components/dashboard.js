@@ -8,7 +8,7 @@ import React from "react";
   
 
     
-    export default function ProfileScreen({ navigation }) {
+    export default function Dashboard({ navigation }) {
       const onPress = () => {
         navigation.navigate("Menu");
       }

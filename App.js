@@ -6,6 +6,9 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Dashboard from "./components/dashboard";
 import Menu from "./components/menu";
 import SignupComponent from "./components/signup";
+import { Ionicons } from '@expo/vector-icons';
+import Detail from "./components/Detail";
+import Post from "./components/post"
 
 
 // const App = () => {
@@ -24,8 +27,13 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
+      {/* <NavigationContainer>
+      <RootNavigator />
+    </NavigationContainer> */}
 
         <Stack.Screen name="Login" component={LoginComponent}/>
+        <Stack.Screen name="Post" component={Post} />
+        <Stack.Screen name="Detail" component={Detail} />
         <Stack.Screen name="Signup" component={SignupComponent}/>
         <Stack.Screen name="Dashboard" component={Dashboard}/>
         <Stack.Screen name="Menu" component={Menu}/>
@@ -43,3 +51,36 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
 });
+
+const rootStack = () => {
+  return (
+    <Stack.Navigator
+      screenOptions={{
+        headerStyle: {
+          backgroundColor: 'blue',
+        },
+        headerTintColor: 'white',
+      }}>
+      <Stack.Screen
+        name="Get"
+        component={Get}
+        options={({ navigation, route }) => ({
+          title: 'CRUD Data User',
+          headerRight: () => (
+            <Ionicons
+              name={'ios-add-circle'}
+              size={25}
+              color={'white'}
+              style={{ marginRight: 15 }}
+              onPress={() => navigation.navigate('Post')}
+            />
+          ),
+        })}
+      />
+     
+    </Stack.Navigator>
+  );
+};
+
+
+
